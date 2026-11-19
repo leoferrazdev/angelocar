@@ -1,0 +1,45 @@
+# Ângelo Car Oficina Mecânica — Configuração de Performance, SEO e Segurança (LiteSpeed / Apache)
+Options -Indexes
+
+RewriteEngine On
+
+# 1. Forçar HTTPS e domínio canônico sem www (https://angelocar.com.br)
+RewriteCond %{HTTPS} !=on [OR]
+RewriteCond %{HTTP_HOST} ^www\.angelocar\.com\.br$ [NC]
+RewriteRule ^ https://angelocar.com.br%{REQUEST_URI} [L,R=301]
+
+# 2. Bloquear acesso público a pastas de código-fonte, scripts e metadados git
+RewriteRule ^(src|scripts|\.git)(/|$) - [F,L,NC]
+RewriteRule ^(package\.json|README\.md)$ - [F,L,NC]
+
+# 3. Redirecionamentos de URLs legadas (caso migrem links antigos)
+RewriteRule ^socorro-mecanico-24h/?$ /servicos/socorro-mecanico-24h/ [L,R=301]
+RewriteRule ^ar-condicionado/?$ /servicos/ar-condicionado-automotivo/ [L,R=301]
+RewriteRule ^retifica/?$ /servicos/retifica-e-conserto-de-motor/ [L,R=301]
+
+# 4. Compressão Gzip / Deflate
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript application/json application/xml image/svg+xml
+</IfModule>
+
+# 5. Cache agressivo para ativos estáticos (Core Web Vitals)
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType image/webp "access plus 1 year"
+  ExpiresByType image/png "access plus 1 year"
+  ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType image/x-icon "access plus 1 year"
+  ExpiresByType text/css "access plus 1 month"
+  ExpiresByType application/javascript "access plus 1 month"
+  ExpiresByType text/html "access plus 10 minutes"
+</IfModule>
+
+# 6. Cabeçalhos de Segurança e Performance
+<IfModule mod_headers.c>
+  Header set X-Content-Type-Options "nosniff"
+  Header set X-Frame-Options "SAMEORIGIN"
+  Header set Referrer-Policy "strict-origin-when-cross-origin"
+  Header set Permissions-Policy "geolocation=(), microphone=(), camera=()"
+</IfModule>
+
+ErrorDocument 404 /index.html
