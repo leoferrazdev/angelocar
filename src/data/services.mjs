@@ -390,4 +390,62 @@ export const SERVICES = [
       }
     ]
   }
+,
+  {
+    slug: 'conserto-de-cambio-automatico',
+    shortTitle: 'Conserto de Câmbio Automático',
+    navTitle: 'Câmbio Automático',
+    tag: 'Transmissão Automática',
+    title: 'Conserto de Câmbio Automático em Porto Alegre | Ângelo Car',
+    metaDescription: 'Conserto de câmbio automático e troca de óleo de transmissão em Porto Alegre. Diagnóstico por scanner, trancos, patinação e reparo na Cavalhada.',
+    h1: 'Conserto de Câmbio Automático e Transmissão em Porto Alegre',
+    heroBadge: 'Transmissão Automática • Diagnóstico na Zona Sul',
+    heroLead: 'Câmbio automático dando tranco, patinando, atrasando as marchas, travado em modo de emergência ou com aviso no painel? Fazemos diagnóstico eletrônico por scanner, troca de fluido de transmissão e reparos na Cavalhada, Porto Alegre.',
+    cardSummary: 'Diagnóstico de falhas na transmissão automática, troca de óleo/fluido de câmbio, verificação de corpo de válvulas, solenoides e reparos.',
+    priceHighlight: 'Diagnóstico eletrônico da transmissão com scanner',
+    heroImage: '/assets/img/interior-elevadores-oficina.webp',
+    heroImageMobile: '/assets/img/interior-elevadores-oficina.webp',
+    heroAlt: 'Diagnóstico e conserto de câmbio automático nos elevadores da Ângelo Car Oficina Mecânica em Porto Alegre',
+    whatsappMessage: 'Olá Ângelo Car! Preciso de avaliação para Câmbio Automático (tranco / patinando / troca de óleo).',
+    overviewTitle: 'Diagnóstico de câmbio automático: como evitar a troca completa da transmissão',
+    overviewText: 'Problemas no câmbio automático costumam assustar pelo custo, mas nem todo sintoma significa que a caixa inteira precisa ser reconstruída. Muitas vezes, falhas como trancos entre marchas, atraso no engate ou mensagens de erro são causadas por óleo degradado, baixo nível de fluido, solenoides com defeito ou falha em sensores de velocidade. Na Ângelo Car, passamos o scanner automotivo para identificar os códigos de falha da transmissão e indicar a solução correta.',
+    symptoms: [
+      'Trancos fortes ao engatar D (Drive), R (Ré) ou durante as trocas de marchas',
+      'Câmbio patinando: o motor acelera, o giro sobe mas o carro demora a desenvolver velocidade',
+      'Atraso excessivo para engatar a marcha ou carro sem força nas arrancadas e subidas',
+      'Câmbio travado em modo de segurança / emergência (geralmente fixo em 3ª marcha)',
+      'Luz de advertência de transmissão ou injeção acesa no painel de instrumentos',
+      'Vazamento de fluido avermelhado ou escuro embaixo do veículo na garagem'
+    ],
+    differentials: [
+      'Diagnóstico eletrônico avançado com leitura de parâmetros da transmissão via scanner',
+      'Avaliação honesta: diferenciação clara entre falha de fluido/sensores e desgaste mecânico pesado',
+      'Troca de óleo de câmbio automático e filtro seguindo as especificações da montadora',
+      'Atendimento presencial na Av. Vicente Monteggia, 333 (Cavalhada, Zona Sul de Porto Alegre)'
+    ],
+    steps: [
+      { title: 'Varredura eletrônica', text: 'Conectamos o scanner para ler códigos de erro na TCU (módulo da transmissão) e parâmetros em tempo real.' },
+      { title: 'Inspeção de fluido e nível', text: 'Checamos o estado do fluido de transmissão (coloração, odor de queimado, contaminação) e presença de vazamentos.' },
+      { title: 'Orçamento transparente', text: 'Apresentamos o diagnóstico técnico objetivo com indicação exata do serviço necessário e peças.' },
+      { title: 'Reparo e calibração', text: 'Executamos o reparo, troca de fluido/filtro, reset dos parâmetros adaptativos e teste de rodagem.' }
+    ],
+    faqs: [
+      {
+        q: 'O que pode causar tranco no câmbio automático?',
+        a: 'Os trancos geralmente ocorrem por fluido de transmissão vencido/baixo nível, solenoides do corpo de válvulas travando, desgaste em coxins do motor/câmbio ou descalibração do módulo eletrônico.'
+      },
+      {
+        q: 'De quanto em quanto tempo devo trocar o óleo do câmbio automático?',
+        a: 'A recomendação média varia entre 40.000 km e 60.000 km (ou 3 a 5 anos), dependendo do modelo do carro e do regime de uso. Óleo vencido perde viscosidade e causa desgaste precoce dos discos de embreagem internos.'
+      },
+      {
+        q: 'O que significa quando o câmbio entra em modo de emergência?',
+        a: 'O módulo eletrônico detecta uma anomalia de pressão, temperatura ou rotação e trava o câmbio em uma marcha fixa (geralmente 3ª) para proteger o conjunto até a oficina. Traga o carro para passar o scanner assim que o aviso aparecer.'
+      },
+      {
+        q: 'Vocês atendem todos os tipos de câmbio (CVT, automatizado, automático convencional)?',
+        a: 'Sim, avaliamos transmissões automáticas convencionais (com conversor de torque), câmbios CVT e automatizados das principais montadoras que rodam em Porto Alegre.'
+      }
+    ]
+  }
 ];
