@@ -339,6 +339,8 @@ export function renderLayout({
   <title>${escapeHtml(title)}</title>
   <meta name="description" content="${escapeHtml(description)}">
   <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="google-site-verification" content="Au77Kpub4K5QsjAs18jylXBD-CyY8qFjvLFX6kkSfCU">
+  <meta name="google-site-verification" content="VTSKps2-3rMOUhZgAJPrr9Yv8hk6GG9CuQ0BQxE-U6k">
   <link rel="canonical" href="${canonicalUrl}">
   <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
