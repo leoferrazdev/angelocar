@@ -97,7 +97,7 @@ export const SITE = {
   tracking: {
     gtmId: '',
     ga4Id: '',
-    googleAdsId: ''
+    googleAdsId: 'AW-806732779'
   }
 };
 

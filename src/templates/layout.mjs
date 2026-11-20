@@ -319,6 +319,18 @@ export function renderLayout({
     ? `<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','${SITE.tracking.gtmId}');</script>`
     : '';
 
+  const gtagId = SITE.tracking.googleAdsId || SITE.tracking.ga4Id;
+  const gtagHead = gtagId
+    ? `<script async src="https://www.googletagmanager.com/gtag/js?id=${gtagId}"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    ${SITE.tracking.googleAdsId ? `gtag('config', '${SITE.tracking.googleAdsId}');` : ''}
+    ${SITE.tracking.ga4Id ? `gtag('config', '${SITE.tracking.ga4Id}');` : ''}
+  </script>`
+    : '';
+
   return `<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -352,6 +364,7 @@ export function renderLayout({
 
   <link rel="stylesheet" href="/assets/css/styles.css">
   ${gtmHead}
+  ${gtagHead}
   ${schemaTags}
 </head>
 <body>
