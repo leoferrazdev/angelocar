@@ -93,10 +93,10 @@ export const SITE = {
       caption: 'Acesso direto pela Av. Vicente Monteggia com pátio próprio'
     }
   ],
-  // IDs prontos para preencher assim que o cliente/gestor ativar o GTM/GA4 no novo domínio
+  // IDs configurados para GTM/GA4/Google Ads no domínio oficial
   tracking: {
     gtmId: '',
-    ga4Id: '',
+    ga4Id: 'G-Z4GV3K3YGF',
     googleAdsId: 'AW-806732779'
   }
 };
